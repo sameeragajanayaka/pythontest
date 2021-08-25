@@ -25,7 +25,7 @@ def get():
 #     m['joy']=str(emotion.affect_frequencies['joy'])
 #     d['Query']=str(m)
 #     d['Senti']=str(analysis.polarity)+","+str(analysis.subjectivity)
-    cr = csv.reader(open('http://example.com/passkey=wedsmdjsjmdd',"rb"))
+    cr = csv.reader(open('https://ai4covid.lk/analysisdata.csv',"rb"))
     return jsonify(cr)
 
 
