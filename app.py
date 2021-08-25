@@ -26,7 +26,7 @@ def get():
 #     d['Query']=str(m)
 #     d['Senti']=str(analysis.polarity)+","+str(analysis.subjectivity)
     cr = csv.reader(open('https://ai4covid.lk/analysisdata.csv',"rb"))
-    return jsonify(cr)
+    return jsonify("asas")
 
 
 
