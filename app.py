@@ -10,7 +10,7 @@ app=Flask(__name__)
 @app.route('/api')
 def get():
     d={}
-    result=str(request.args['Query'])
+    result=str("sameera")
     emotion = ns(result)
     analysis = TextBlob(result);
     d={}
@@ -25,7 +25,7 @@ def get():
     m['joy']=str(emotion.affect_frequencies['joy'])
     d['Query']=str(m)
     d['Senti']=str(analysis.polarity)+","+str(analysis.subjectivity)
-    return jsonify(d)
+    return jsonify("sammera")
 
 
 
