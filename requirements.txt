@@ -7,4 +7,3 @@ requests
 Api
 Resource
 flask_restful
-urllib2
