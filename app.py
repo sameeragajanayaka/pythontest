@@ -28,7 +28,7 @@ def get():
 #     d['Senti']=str(analysis.polarity)+","+str(analysis.subjectivity)
 #     cr = csv.reader(open('https://ai4covid.lk/analysisdata.csv',"rb"))
     df=pd.read_csv('http://ai4covid.lk/analysisdata.csv')
-    a=df.to_string();
+    a=df.to_string()
     return a
 
 
