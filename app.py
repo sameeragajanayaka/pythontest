@@ -9,23 +9,24 @@ app=Flask(__name__)
 
 @app.route('/api')
 def get():
-    d={}
-    result=str("sameera")
-    emotion = ns(result)
-    analysis = TextBlob(result);
-    d={}
-    m={}
-    m['fear']=str(emotion.affect_frequencies['fear'])
-    m['anger']=str(emotion.affect_frequencies['anger'])
-    m['anticip']=str(emotion.affect_frequencies['anticip'])
-    m['trust']=str(emotion.affect_frequencies['trust'])
-    m['surprise']=str(emotion.affect_frequencies['surprise'])
-    m['sadness']=str(emotion.affect_frequencies['sadness'])
-    m['disgust']=str(emotion.affect_frequencies['disgust'])
-    m['joy']=str(emotion.affect_frequencies['joy'])
-    d['Query']=str(m)
-    d['Senti']=str(analysis.polarity)+","+str(analysis.subjectivity)
-    return jsonify("sammera")
+#     d={}
+#     result=str("sameera")
+#     emotion = ns(result)
+#     analysis = TextBlob(result);
+#     d={}
+#     m={}
+#     m['fear']=str(emotion.affect_frequencies['fear'])
+#     m['anger']=str(emotion.affect_frequencies['anger'])
+#     m['anticip']=str(emotion.affect_frequencies['anticip'])
+#     m['trust']=str(emotion.affect_frequencies['trust'])
+#     m['surprise']=str(emotion.affect_frequencies['surprise'])
+#     m['sadness']=str(emotion.affect_frequencies['sadness'])
+#     m['disgust']=str(emotion.affect_frequencies['disgust'])
+#     m['joy']=str(emotion.affect_frequencies['joy'])
+#     d['Query']=str(m)
+#     d['Senti']=str(analysis.polarity)+","+str(analysis.subjectivity)
+    cr = csv.reader(open('http://example.com/passkey=wedsmdjsjmdd',"rb"))
+    return jsonify(cr)
 
 
 
