@@ -1,7 +1,6 @@
 from flask import Flask,jsonify,request
 from nrclex import NRCLex as ns
-import csv
-import urllib2
+import pandas as pd
 import nltk
 nltk.download('punkt')
 from textblob import TextBlob
@@ -28,13 +27,9 @@ def get():
 #     d['Query']=str(m)
 #     d['Senti']=str(analysis.polarity)+","+str(analysis.subjectivity)
 #     cr = csv.reader(open('https://ai4covid.lk/analysisdata.csv',"rb"))
-    url = 'http://ai4covid.lk/analysisdata.csv'
-    response = urllib2.urlopen(url)
-    cr = csv.reader(response)
-
-    for row in cr:
-        print row
-        return jsonify(row)
+    df=pd.read_csv('http://ai4covid.lk/analysisdata.csv')
+    a=df.to_string();
+    return a
 
 
 
